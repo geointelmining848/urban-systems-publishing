@@ -1,0 +1,3 @@
+# Optional corpus operations only; core mentoring needs no Python packages.
+pandas>=2.2,<4
+pyarrow>=18,<25

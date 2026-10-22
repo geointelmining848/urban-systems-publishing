@@ -1,0 +1,17 @@
+# Research inputs and harvested metadata stay local.
+corpus/
+private-backup/
+local-evaluation/
+*-workspace/
+*.parquet
+*.jsonl
+*.log
+*.zip
+*.skill
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.env.*
+.DS_Store
+Thumbs.db

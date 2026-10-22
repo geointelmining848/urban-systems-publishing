@@ -1,0 +1,2 @@
+# Optional only: the mentoring skill itself has no Python dependencies.
+-r skills/urban-systems-publishing/scripts/requirements.txt
