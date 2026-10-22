@@ -26,7 +26,7 @@ the entire workflow. Read [journal-profiles.md](journal-profiles.md) for the cat
 
 ## Useful comparisons to investigate
 
-These are starting hypotheses from the original skill, not categorical admissions rules.
+These are starting hypotheses about audience fit, not categorical admissions rules.
 
 | Comparison | What should determine the choice |
 |---|---|
@@ -71,7 +71,7 @@ novelty directly from query counts or article volume.
   options for the exact journal and article type. Check funder requirements, embargoes,
   institutional agreements, waivers, and whether any fee is mandatory. Do not generalize
   from a publisher brand. For example, the official Nature Cities and Nature Sustainability
-  pages offer subscription and Gold OA options for primary research (checked 2026-10-22):
+  pages offer subscription and Gold OA options for primary research:
   [Nature Cities options](https://www.nature.com/natcities/submission-guidelines/publishing-options),
   [Nature Sustainability options](https://www.nature.com/natsustain/submission-guidelines/publishing-options).
   Recheck before quoting a price or advising a financial commitment.

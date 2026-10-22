@@ -18,7 +18,7 @@ TIERS = {tier: [tag for tag in SOURCES if TIER[tag] == tier] for tier in ('broad
 
 
 def list_journals():
-    print('Editorial reach heuristics from the original skill, not rankings or submission guarantees:')
+    print('Journal audience groups, not rankings or submission guarantees:')
     for tier, tags in TIERS.items():
         print(f"{tier}: {'  '.join(tags)}")
     print('All journals are included unless --exclude-journal is supplied. Verify current venue policies separately.')
@@ -27,7 +27,7 @@ def list_journals():
 def check_provenance(root):
     path = root / 'provenance.json'
     if not path.exists():
-        print('Coverage: legacy corpus without retrieval provenance; completeness and freshness are unverified.')
+        print('Coverage: corpus without retrieval provenance; completeness and freshness are unverified.')
         return
     provenance = json.loads(path.read_text(encoding='utf-8'))
     if provenance.get('schema_version') != SCHEMA_VERSION:
@@ -128,7 +128,6 @@ def main(argv=None):
     parser.add_argument('-n', '--num', type=int, default=15)
     parser.add_argument('--norms', action='store_true')
     parser.add_argument('--journals', action='store_true')
-    parser.add_argument('--include-flagged', action='store_true', help='Legacy compatibility flag; all journals already included')
     args = parser.parse_args(argv)
     explicit = set(t.strip() for t in (args.journal or '').split(',') if t.strip())
     exclude = set(t.strip() for t in args.exclude_journal.split(',') if t.strip())
@@ -149,9 +148,7 @@ def main(argv=None):
     tags = set(TIERS[args.tier]) if args.tier else None
     if explicit:
         tags = explicit if tags is None else tags & explicit
-    if args.include_flagged:
-        print('Legacy --include-flagged: no effect; all journals are included by default.')
-    print('Exclusions: ' + (', '.join(sorted(exclude)) or 'none') + '. Historical indexing labels do not establish article quality.')
+    print('Exclusions: ' + (', '.join(sorted(exclude)) or 'none') + '. Indexing labels do not establish article quality.')
     root = args.corpus_dir.expanduser()
     try:
         check_provenance(root)

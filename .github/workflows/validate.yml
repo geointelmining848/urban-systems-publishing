@@ -1,4 +1,4 @@
-name: Validate skill package
+name: Check manuscript-writing skill
 on:
   push:
   pull_request:

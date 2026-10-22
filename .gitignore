@@ -1,8 +1,5 @@
 # Research inputs and harvested metadata stay local.
 corpus/
-private-backup/
-local-evaluation/
-*-workspace/
 *.parquet
 *.jsonl
 *.log

@@ -2,21 +2,21 @@
 
 [简体中文](CONTRIBUTING.zh-CN.md)
 
-Keep the skill focused on publication mentoring for the researcher's own urban/regional
-study. Preserve analytical, qualitative, and mixed-method work; do not equate a venue's
-reputation with a universal method or a causal requirement for every contribution.
+Help make the skill useful for students writing urban and regional research manuscripts.
+Suggestions may improve explanations, examples, scientific accuracy, language support or
+the optional corpus tools. Support quantitative, qualitative and mixed-method work.
 
-1. Describe a concrete failure or missing use case, including the intended output.
-2. Make the smallest useful correction. Keep shared guidance in `SKILL.md`; put detailed
-   methods in relevant references. Update English and Chinese user documentation together.
-3. Support disputed scientific claims with primary sources. Date journal-policy checks
-   and link official guidance. Do not fabricate citations, results, or current limits.
-4. Add or adapt a synthetic scenario in `skills/urban-systems-publishing/evals/evals.json`.
-   Include expected behavior and a failure condition, not just a wording match.
-5. Run `python -m unittest discover -s tests -v` after installing `requirements-dev.txt`.
-   For changed instructions, also try realistic prompts with and without the revision.
-   Record client/model, prompts, sources available, outputs, and limitations; do not label
-   static checks as successful model behavior or infer trigger accuracy from forced use.
+1. Describe the writing task and the difficulty a student encounters. Use a short,
+   fictional example when possible.
+2. Keep shared guidance in `SKILL.md` and detailed methods in the relevant references.
+   Keep English and Chinese guides consistent.
+3. Support scientific corrections with primary sources and journal requirements with
+   current official guidance. Preserve scholarly citations and attribution.
+4. Check that a suggested prompt produces useful writing feedback and explains important
+   changes without inventing evidence or taking over the student's research decisions.
+5. For code or package changes, install `requirements-dev.txt` and run
+   `python -m unittest discover -s tests -v`. The tests use synthetic records and mocked
+   requests; they do not require a literature download.
 
 Never submit credentials, local account paths, chat history, identifiable geodata,
 unpublished manuscripts, corpus dumps, or third-party excerpts without redistribution

@@ -25,17 +25,17 @@ python scripts/query_corpus.py "street network accessibility" --corpus-dir ../lo
 python scripts/query_corpus.py --norms --corpus-dir ../local-corpus --journal UrbanStud,RegStud
 ```
 
-Alternatively set `URBAN_SYSTEMS_CORPUS` to the corpus directory. For compatibility,
-queries can read an existing `corpus/` inside the installed skill; it is not shipped here.
-Legacy data without provenance are labeled unverified. Newly built Parquet checksums
+Alternatively set `URBAN_SYSTEMS_CORPUS` to the corpus directory. Without either setting,
+queries look for `corpus/` inside the installed skill; no corpus is shipped here.
+Data without retrieval provenance are labeled unverified. Built Parquet checksums
 must match their provenance. Querying never contacts the network.
 
 Words use literal, case-insensitive AND matching; `--any` uses OR and `--phrase` treats
 each quoted argument as a phrase. `--has-abstract` filters records with abstract text.
 `--show-abstract` displays a short local excerpt; do not redistribute abstract collections.
 All journals are included by default. Use `--exclude-journal TAG1,TAG2` for explicit,
-reported exclusions. Historical indexing concerns are not automatic article-quality
-judgments. `--include-flagged` remains an inert compatibility flag.
+reported exclusions. Indexing status alone does not establish an individual article's
+quality.
 
 Observed norms describe the retrieved sample, not current author-guide limits. Citation
 counts are a sorting option, not quality scores. Report filters, dates, missing abstracts,
@@ -64,16 +64,16 @@ The catalog has 45 journal tags. Pass explicit tags, or explicitly choose `--all
 The cap is per journal. Broad journals also use the recorded topic-field filters.
 The saved provenance includes filters, retrieval times, schema, counts, hashes, and
 completion status. Cached pulls are reused only when their parameters and checksum match;
-use a new directory for changed scope or incompatible legacy build caches. Incomplete
+use a new directory for changed scope or incompatible build caches. Incomplete
 attempts restart rather than pretending to resume from a saved cursor.
 
 - Exit `0`: complete for the recorded filters, not the entire literature.
 - Exit `2`: a capped/partial result, or a command-line validation error; read the message.
 - Exit `1`: a failed build; an existing consolidated corpus is preserved on fetch failure.
 
-The API contract was checked on 2026-10-22 against [authentication](https://help.openalex.org/api/authentication/),
+Consult OpenAlex's [authentication](https://help.openalex.org/api/authentication/),
 [pagination](https://help.openalex.org/api/paging/), and [filtering](https://help.openalex.org/api/filtering/).
-These policies can change. The release tests use mocked responses, not a live harvest.
+These policies can change; check them before starting a new collection.
 
 ## 中文要点
 

@@ -8,7 +8,7 @@ claim problem affecting it; do not force the entire study through a gate first.
 
 ## Two useful axes, applied as hypotheses
 
-Keep the original skill's **reach x epistemic culture** framework:
+Consider **reach x epistemic culture**:
 
 - **Reach:** a focused contribution for specialists, a contribution to a wider disciplinary
   debate, or a result connecting several disciplines or policy communities.
@@ -92,7 +92,7 @@ issues and [spatial-methods.md](spatial-methods.md) for scale and specification.
 
 ## Verdict with a concrete next move
 
-For a full triage request, the original three verdicts remain useful:
+For a full triage request, use a verdict with an explanation and next action:
 
 - **GO:** the supplied evidence supports moving to the requested writing or submission
   preparation stage. State what was checked, unresolved limits, and candidate fit. This

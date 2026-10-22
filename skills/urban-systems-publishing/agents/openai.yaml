@@ -1,4 +1,4 @@
 interface:
   display_name: "Urban and Regional Systems Publishing"
-  short_description: "Review and strengthen urban and regional research"
-  default_prompt: "Use $urban-systems-publishing to review my manuscript's claims, spatial reasoning, and journal fit."
+  short_description: "Help students write urban and regional manuscripts"
+  default_prompt: "Use $urban-systems-publishing to help me improve my manuscript and explain the reasoning behind your suggestions."

@@ -3,7 +3,7 @@
 
 Existing OPENALEX_API_KEY is read only when fetching, sent as a bearer header,
 never written to disk. The caller manages access and spending authorization.
-API contract checked 2026-10-22: https://help.openalex.org/api/paging/
+API documentation: https://help.openalex.org/api/paging/
 https://help.openalex.org/api/authentication/ and /api/filtering/
 Field IDs: https://help.openalex.org/data/fields/
 """
@@ -165,7 +165,7 @@ def fetch_journal(root, tag, config, api_key, fetcher=fetch_json):
     metadata = raw / (tag + '.meta.json')
     if output.exists() or metadata.exists():
         if not output.exists() or not metadata.exists():
-            raise ValueError(f'{tag}: incomplete or legacy cache; choose a fresh corpus directory.')
+            raise ValueError(f'{tag}: incomplete or incompatible cache; choose a fresh corpus directory.')
         previous = json.loads(metadata.read_text(encoding='utf-8'))
         if previous.get('parameters') != config or previous.get('sha256') != digest(output):
             raise ValueError(f'{tag}: cache parameters or checksum differ; choose a fresh corpus directory.')

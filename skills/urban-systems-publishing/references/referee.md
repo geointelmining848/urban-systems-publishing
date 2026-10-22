@@ -12,7 +12,7 @@ Assess whether the contribution and audience fit are legible from the title, abs
 cover letter, and any supplied manuscript. State which material you actually reviewed.
 An abstract-only assessment cannot establish the adequacy of unseen methods or evidence.
 
-Use the original **reach x epistemic culture** lens as a hypothesis:
+Use the **reach x epistemic culture** lens as a hypothesis:
 
 - For a broad audience, can adjacent-field readers understand the contribution and why
   it matters? Does the evidence support the claimed reach?

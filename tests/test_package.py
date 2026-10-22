@@ -1,6 +1,5 @@
-"""Portable package invariants; these tests do not measure model behavior."""
+"""Check the installable skill and its student guides."""
 from pathlib import Path
-import json
 import re
 import unittest
 import yaml
@@ -32,17 +31,14 @@ class PackageTests(unittest.TestCase):
                 target = target.strip('<>')
                 self.assertTrue((path.parent / target).exists(), f'{path.relative_to(ROOT)} -> {target}')
 
-    def test_scenarios_are_distinct_and_include_boundaries(self):
-        data = json.loads((SKILL / 'evals/evals.json').read_text(encoding='utf-8'))
-        cases = data['evals']
-        self.assertEqual(len({x['id'] for x in cases}), len(cases))
-        self.assertEqual(len({x['prompt'] for x in cases}), len(cases))
-        self.assertEqual({'positive', 'negative', 'edge'}, {x['category'] for x in cases})
-        self.assertTrue(any(re.search(r'[\u4e00-\u9fff]', x['prompt']) for x in cases))
-        for case in cases:
-            self.assertTrue(case['assertions'] and case['failure_condition'])
-            self.assertIsInstance(case['should_trigger'], bool)
-            self.assertEqual(case['files'], [])  # cases require no private artifacts
+    def test_installable_layout_and_bilingual_guides(self):
+        expected = {'SKILL.md', 'agents', 'references', 'scripts'}
+        self.assertEqual({p.name for p in SKILL.iterdir()}, expected)
+        self.assertTrue((SKILL / 'scripts/requirements.txt').is_file())
+        for name in ('manuscript-workflows.md', 'manuscript-workflows.zh-CN.md'):
+            self.assertTrue((ROOT / 'docs' / name).is_file())
+        chinese = (ROOT / 'docs/manuscript-workflows.zh-CN.md').read_text(encoding='utf-8')
+        self.assertTrue(re.search(r'[\u4e00-\u9fff]', chinese))
 
     def test_public_text_has_no_account_paths_or_secret_material(self):
         patterns = [r'[A-Za-z]:[\\/]Users[\\/][\w.-]+', r'/home/[\w.-]+/',

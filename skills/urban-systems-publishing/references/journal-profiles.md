@@ -1,7 +1,7 @@
 # Journal profiles - 45 starting points
 
-This catalog preserves the original skill's urban/regional, spatial, environmental-health,
-and complex-systems publication range. It supplies **audience and contribution hypotheses**,
+This catalog covers urban/regional, spatial, environmental-health and complex-systems
+research. It supplies **audience and contribution hypotheses**,
 not current submission specifications, quality rankings, or acceptance probabilities.
 Read only the relevant cluster. Confirm a candidate's current scope and article type from
 its official site and recent publications before recommending it.
@@ -13,11 +13,11 @@ its official site and recent publications before recommending it.
 - [Disciplinary debates and substantive fields](#disciplinary-debates-and-substantive-fields)
 - [Specialized methods and applications](#specialized-methods-and-applications)
 - [Corpus norms and coverage](#corpus-norms-and-coverage)
-- [Official source checks](#official-source-checks)
+- [Official sources](#official-sources)
 
 ## How to use a profile
 
-The grouping reflects the original reach-tier framework but is deliberately approximate.
+The audience grouping is deliberately approximate.
 The same journal can be broad for one community and specialized for another. A journal's
 article types, editorial areas, and accepted methods may span several epistemic cultures.
 Do not infer that a quantitative result lacks theory, that a geography journal rejects
@@ -149,9 +149,7 @@ journal's official source and distinguish it from the author's institutional req
 
 ## Corpus norms and coverage
 
-The original local skill included a June 2026 corpus-derived table, but the public skill
-does not bundle that dataset or present those numbers as a current verified benchmark.
-Use `scripts/query_corpus.py --norms` only with an available corpus whose provenance you
+Use the optional `scripts/query_corpus.py --norms` with a local corpus whose provenance you
 can inspect. Report build date, years, journals, field filters, retrieval limits, excluded
 records, deduplication, and abstract coverage. Distinguish a completed retrieval from a
 capped sample. Low-reference or missing-abstract records are not necessarily invalid papers.
@@ -163,26 +161,23 @@ to match a median. High citation counts or low publication volume do not prove q
 
 For an abstract median, show both the number with abstracts and total records, ideally by
 year and article type. High coverage alone does not remove selection or metadata errors.
-Do not infer near-full coverage from a publisher's name: the original table itself listed
-sparse abstract coverage for several Nature titles. Missing or zero reference counts can
+Do not infer near-full coverage from a publisher's name. Missing or zero reference counts can
 be missing metadata rather than real zero-reference articles. Label uncertainty and avoid
 using noisy medians as targets that override a current author guide.
 
-## Official source checks
+## Official sources
 
-The following representative checks informed the public revision on **2026-10-22**. They
-are examples of the verification method, not certification of every catalog entry or
-future requirement. Descriptions above otherwise retain the original author's editorial
-heuristics and should be checked for the manuscript in question.
+Use official journal pages to check scope, article types and submission requirements for
+your manuscript. The links below are starting points; consult current pages before making
+a submission decision.
 
 - [Urban Studies aims and scope](https://www.urbanstudiesjournal.com/about/): welcomes
   empirical and theoretical social-science contributions and asks for wider urban
   understanding. This supports testing the conceptual contribution without excluding
   quantitative work by default.
 - [Annals AAG aims and scope](https://www.tandfonline.com/journals/raag21/about-this-journal):
-  lists Geographic Methods alongside substantive geographic areas in the official search
-  listing (the full page returned an access error during this check). A journal-wide
-  interpretive-only label is therefore inappropriate.
+  includes Geographic Methods alongside substantive geographic areas. Check the relevant
+  editorial area rather than assuming that the journal accepts only interpretive work.
 - [Nature Cities publishing options](https://www.nature.com/natcities/submission-guidelines/publishing-options)
   and [Nature Sustainability publishing options](https://www.nature.com/natsustain/submission-guidelines/publishing-options):
   offer subscription and Gold OA routes for primary research; verify current prices and

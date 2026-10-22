@@ -102,7 +102,7 @@ class CorpusBuildTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             build.fetch_journal(self.root, 'Cities', self.config, 'test')
 
-    def test_legacy_done_marker_cannot_claim_completion(self):
+    def test_done_marker_without_metadata_cannot_claim_completion(self):
         (self.root / 'raw').mkdir()
         (self.root / 'raw' / 'Cities.jsonl').write_text('', encoding='utf-8')
         (self.root / 'raw' / 'Cities.jsonl.done').write_text('1', encoding='utf-8')
@@ -169,7 +169,7 @@ class CorpusQueryTests(unittest.TestCase):
     def tearDown(self):
         self.temp.cleanup()
 
-    def test_legacy_quality_flag_does_not_hide_records(self):
+    def test_records_are_excluded_only_when_requested(self):
         self.assertEqual(set(query.search(self.df, [])['journal']), {'Cities', 'IJERPH', 'UrbanStud'})
         self.assertEqual(set(query.search(self.df, [], exclude={'IJERPH'})['journal']), {'Cities', 'UrbanStud'})
 

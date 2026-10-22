@@ -8,7 +8,7 @@ predictable formula. Read only the sections needed for the requested deliverable
 
 ## Choose the significance the evidence earns
 
-The original skill's three contribution types remain useful; a paper can combine them.
+Consider three types of contribution; a paper can combine them.
 A careful descriptive or measurement contribution also deserves a clear account of its
 value and need not be disguised as a causal or theoretical breakthrough.
 

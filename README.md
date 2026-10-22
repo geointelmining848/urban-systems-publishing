@@ -1,17 +1,19 @@
-# Urban and Regional Systems Publishing
+# Urban and Regional Manuscript Writing
 
-[简体中文](README.zh-CN.md) · [Contributing](CONTRIBUTING.md) · [Evaluation](docs/evaluation.md)
+[简体中文](README.zh-CN.md) · [Writing workflows](docs/manuscript-workflows.md) · [Contributing](CONTRIBUTING.md)
 
-A publication mentor for your own urban and regional research, usable in Codex and
-Claude Code. It helps review spatial reasoning, sharpen a defensible contribution,
-choose an audience, draft manuscript and submission materials, and respond to reviewers.
-It covers urban/regional economics, planning, transport, population/environmental health,
-and urban complex systems. It does not promise acceptance or perform a full empirical
-analysis merely because you ask for a manuscript review.
+A manuscript-writing skill for students working on urban and regional research in Codex
+or Claude Code. Use it to turn your research question, evidence and notes into a coherent
+paper, improve sections, check spatial reasoning, identify suitable readers and journals,
+and prepare responses to reviewers. It explains consequential suggestions so you can
+make informed writing and research decisions.
+
+It supports quantitative, qualitative and mixed-method studies in urban/regional economics,
+planning, transport, population/environmental health, and urban complex systems.
 
 The same [skill folder](skills/urban-systems-publishing/SKILL.md) serves both clients.
 Instructions and references work without Python, API keys, or a downloaded corpus.
-Python is needed only for the optional helpers and development checks.
+Python is needed only for the optional corpus helpers.
 
 ## Install
 
@@ -52,11 +54,9 @@ New-Item -ItemType Directory -Path $skillRoot -Force | Out-Null
 Copy-Item -LiteralPath '.\skills\urban-systems-publishing' -Destination $target -Recurse
 ```
 
-For Claude Code, change `.agents\skills` to `.claude\skills`. Some older/local Codex
-installations use `~/.codex/skills`; update that existing location if your client discovers
-it, rather than creating a duplicate. Current official local-discovery guidance uses
-`.agents/skills`. Reopen the client/session and confirm that the skill appears.
-Sources checked 2026-10-22: [Codex skill discovery](https://learn.chatgpt.com/docs/build-skills),
+For Claude Code, change `.agents\skills` to `.claude\skills`.
+Reopen the client/session and confirm that the skill appears. For client-specific setup,
+consult [Codex skill discovery](https://learn.chatgpt.com/docs/build-skills) and
 [Claude Code skills](https://code.claude.com/docs/en/skills).
 
 ## Use
@@ -78,8 +78,14 @@ Examples:
   into a later decade, then help revise the validation paragraph.”
 
 Supply the question, design, spatial/temporal units, main evidence, desired output, and
-target journal if known. Omit confidential identifiers. The skill loads the relevant
-reference modules instead of imposing its full workflow on every request.
+target journal if known. Omit confidential identifiers. Start with the part you need:
+an outline, one paragraph, an abstract, a figure caption, or a response to a reviewer.
+See the [step-by-step writing workflows](docs/manuscript-workflows.md) for prompts and
+examples, including discussion in one language and manuscript text in another.
+
+Check every factual claim and reference, and retain responsibility for your manuscript.
+Follow your course, supervisor, institution and journal's rules on authorship and AI use.
+When results are missing, the skill uses labeled placeholders instead of inventing them.
 
 ## Optional corpus tools
 
@@ -88,16 +94,7 @@ precedents; it cannot establish novelty, acceptance probability, or a journal's 
 requirements. See [corpus setup and limitations](skills/urban-systems-publishing/references/corpus-tools.md).
 Do not upload confidential manuscripts or research data to build or query a corpus.
 
-## Validation and rights
+## Rights
 
-See [evaluation](docs/evaluation.md) for concrete findings, scenarios, checks, and the
-distinction between structural tests and model behavior. Development checks:
-
-```sh
-python -m pip install -r requirements-dev.txt
-python -m unittest discover -s tests -v
-```
-
-Tests use synthetic records and mocked requests, with no live API harvesting.
-The reviewed source copies contained no license file; this release adds no license grant.
-See [rights and attribution](RIGHTS.md) and [source provenance](docs/provenance.md).
+See [rights and scholarly sources](RIGHTS.md) for repository permissions and third-party
+materials. No open-source license grant is specified.
