@@ -3,7 +3,8 @@
 [简体中文](manuscript-workflows.zh-CN.md) · [Installation and use](../README.md)
 
 Use these prompts with `$urban-systems-publishing` in Codex or
-`/urban-systems-publishing` in Claude Code. Replace bracketed fields with your own
+`/urban-systems-publishing` in Claude Code; for other clients, use the invocation in the
+[installation guide](installation.md). Replace bracketed fields with your own
 research. You can work on one section at a time; a complete manuscript is not required.
 
 ## Start from your research
@@ -87,5 +88,5 @@ place names, policy concepts and methods; check terms that lack a direct transla
 > Distinguish completed work from work still planned. If I disagree, help explain the
 > methodological reason and propose a clear manuscript clarification.
 
-Make the final decisions with your coauthors or supervisor. Check references, declarations,
-authorship and required AI-use disclosures, and follow your course and journal policies.
+Make the final decisions with your coauthors. Check references, declarations,
+authorship and required AI-use disclosures, and follow institutional and journal policies.

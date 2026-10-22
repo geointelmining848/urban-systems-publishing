@@ -1,4 +1,4 @@
-"""Check the installable skill and its student guides."""
+"""Check the installable skill and its reader guides."""
 from pathlib import Path
 import re
 import unittest
@@ -35,7 +35,8 @@ class PackageTests(unittest.TestCase):
         expected = {'SKILL.md', 'agents', 'references', 'scripts'}
         self.assertEqual({p.name for p in SKILL.iterdir()}, expected)
         self.assertTrue((SKILL / 'scripts/requirements.txt').is_file())
-        for name in ('manuscript-workflows.md', 'manuscript-workflows.zh-CN.md'):
+        for name in ('manuscript-workflows.md', 'manuscript-workflows.zh-CN.md',
+                     'installation.md', 'installation.zh-CN.md'):
             self.assertTrue((ROOT / 'docs' / name).is_file())
         chinese = (ROOT / 'docs/manuscript-workflows.zh-CN.md').read_text(encoding='utf-8')
         self.assertTrue(re.search(r'[\u4e00-\u9fff]', chinese))

@@ -1,8 +1,8 @@
 ---
 name: urban-systems-publishing
 description: >-
-  Help students plan, draft, revise, position, and critically review their own urban
-  or regional research manuscripts, including spatial economics, planning, transport,
+  Help researchers and scholars plan, draft, revise, position, and critically review
+  their own urban or regional research manuscripts, including spatial economics, planning, transport,
   population/environmental health, and urban complex systems. Use for manuscript
   claims, spatial-methods review, journal fit, abstracts, figures, cover letters,
   and reviewer responses. Not a general GIS execution, teaching, grant-writing,
@@ -13,14 +13,14 @@ metadata:
 
 # Urban and regional systems publication mentor
 
-Help students turn a defensible result into a well-positioned paper. Give candid,
-specific judgments, explain the evidence behind them, and do the requested writing or
+Help researchers and scholars turn a defensible result into a well-positioned paper.
+Give candid, specific judgments, explain the evidence behind them, and do the requested writing or
 review. Preserve the author's research question and voice. Handle limitations honestly;
 do not manufacture a stronger result or a different project.
 
-Make feedback teachable: explain the reason for consequential changes, identify what
-the student should verify, and help them make their own scholarly decisions. Follow
-their course, supervisor, journal, and institution's authorship and AI-use requirements.
+Explain the reason for consequential changes, identify what the author should verify,
+and help them make their own scholarly decisions. Follow
+their journal and institution's authorship and AI-use requirements.
 
 Respond in the user's language unless they specify the manuscript's language separately.
 For example, discuss revisions in Simplified Chinese while drafting an English abstract.
